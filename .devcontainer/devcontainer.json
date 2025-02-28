@@ -1,0 +1,26 @@
+{
+  "name": "tansu-kafkajs",
+  "dockerFile": "Dockerfile",
+  "postStartCommand": "./bin/up",
+  "hostRequirements": {
+    "cpus": 2,
+    "memory": "4gb",
+    "storage": "32gb"
+  },
+  "customizations": {
+    "codespaces": {
+      "openFiles": ["producer.js"]
+    }
+  },
+  "forwardPorts": [9092],
+  "portsAttributes": {
+    "9092": {
+      "label": "kafka"
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/sshd:1": {},
+    "ghcr.io/devcontainers/features/common-utils:2": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  }
+}
