@@ -2,7 +2,7 @@ const ip = require("ip");
 
 const { Kafka, CompressionTypes, logLevel } = require("kafkajs");
 
-const host = process.env.HOST_IP || ip.address();
+const host = "[::]";
 
 const kafka = new Kafka({
   logLevel: logLevel.DEBUG,

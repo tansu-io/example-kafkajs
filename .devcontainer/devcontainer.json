@@ -12,6 +12,9 @@
       "openFiles": ["producer.js"]
     }
   },
+  "containerEnv": {
+    "KAFKAJS_NO_PARTITIONER_WARNING": 1
+  },
   "forwardPorts": [9092],
   "portsAttributes": {
     "9092": {
